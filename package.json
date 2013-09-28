@@ -2,9 +2,9 @@
   "name": "chunk-rate-readable",
   "version": "0.0.0",
   "description": "Measures the rate at which a given stream emits data chunks and streams the result.",
-  "main": "index.js",
+  "main": "chunk-rate-readable.js",
   "scripts": {
-    "test-main": "tap test/*.js",
+    "test-main": "set -e; for t in test/*.js; do node $t; done",
     "test-0.8": "nave use 0.8 npm run test-main",
     "test-0.10": "nave use 0.10 npm run test-main",
     "test-all": "npm run test-main && npm run test-0.8 && npm run test-0.10",
@@ -18,8 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "nave": "~0.4.3",
-    "tape": "~1.0.4",
-    "tap": "~0.4.3"
+    "tape": "~1.0.4"
   },
   "keywords": [],
   "author": {
@@ -32,7 +31,7 @@
     "url": "https://github.com/thlorenz/chunk-rate-readable/blob/master/LICENSE"
   },
   "engine": {
-    "node": ">=0.6"
+    "node": ">=0.10"
   },
   "testling": {
     "files": "test/*.js",
