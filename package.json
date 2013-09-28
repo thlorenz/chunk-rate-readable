@@ -1,6 +1,6 @@
 {
   "name": "chunk-rate-readable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Measures the rate at which a given stream emits data chunks and streams the result.",
   "main": "chunk-rate-readable.js",
   "scripts": {
