@@ -6,7 +6,7 @@
   "scripts": {
     "test-main": "set -e; for t in test/*.js; do node $t; done",
     "test-0.10": "nave use 0.10 npm run test-main",
-    "test-all": "npm run test-main && npm run test-0.10",
+    "test-all": "npm run test-main && npm run test-0.10 && testling -x open",
     "test": "if [ -e $TRAVIS ]; then npm run test-all; else npm run test-main; fi"
   },
   "repository": {
@@ -17,7 +17,8 @@
   "dependencies": {},
   "devDependencies": {
     "nave": "~0.4.3",
-    "tape": "~1.0.4"
+    "tape": "~1.0.4",
+    "testling": "~1.5.1"
   },
   "keywords": [],
   "author": {
