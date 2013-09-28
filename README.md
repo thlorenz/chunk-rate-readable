@@ -21,6 +21,8 @@ chunkRate(numbersStream, { objectMode: true })
   });
 ```
 
+![example output](https://github.com/thlorenz/chunk-rate-readable/raw/master/assets/chunk-rate-demo.gif)
+
 ## Installation
 
     npm install chunk-rate-readable
