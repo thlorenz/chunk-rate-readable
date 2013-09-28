@@ -49,6 +49,10 @@ Creates a readable stream that will emit how many chunks the given stream emitte
 Call this in case you want to tell the rate stream to end.
 Useful for testing and/or when you want to end your debugging session and allow the program to exit.
 
+## Similar Modules
+
+- [speed-meter](https://github.com/CrowdProcess/speed-meter) measures the number of emitted bytes (vs. number of chunks) over a given time period
+
 ## License
 
 MIT
