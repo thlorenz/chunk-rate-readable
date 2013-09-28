@@ -20,7 +20,7 @@
     "tape": "~1.0.4",
     "testling": "~1.5.1"
   },
-  "keywords": [],
+  "keywords": [ "stream", "speed", "chunk", "rate", "time", "interval" ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
