@@ -6,11 +6,11 @@ var chunkRate = require('../')
 var numbersStream = numbers({ to: 20, throttle: 200 })
 
 var last = 0;
-chunkRate(numbersStream, { objectMode: true })
+chunkRate(numbersStream, { objectMode: true, interval: 500 })
   .on('data',  function (rate) {
     var indicator = rate === last 
       ? '='
       : rate > last ? '▲' : '▼';
-    console.log('%d -> %s', rate, indicator);
+    console.log(' %s  %d/500ms', indicator, rate);
     last = rate;
   });
