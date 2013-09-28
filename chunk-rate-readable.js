@@ -22,6 +22,17 @@ function ChunkRateReadable (stream, opts) {
 }
 var proto = ChunkRateReadable.prototype;
 
+/**
+ * Call this in case you want to tell the state stream to end.
+ * Useful for testing and/or when you want to end your debugging session and allow the program to exit.
+ * 
+ * @name endSoon
+ * @function
+ */
+proto.endSoon = function () {
+  this._ending = true;
+}
+
 proto._init = function (stream) {
   var self = this;
 
@@ -34,6 +45,8 @@ proto._init = function (stream) {
 proto._read = function () {
   var self = this;
 
+  if (self._ending) return self.push(null);
+
   function push() {
 
     self.push(self._objectMode ? self._count : '' + self._count);
@@ -41,4 +54,4 @@ proto._read = function () {
   }
 
   setTimeout(push, this._interval);    
-};
+}

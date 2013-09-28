@@ -21,11 +21,3 @@ NumberReadable.prototype._read = function () {
   var push = function () { this.push('' + this.idx++); }.bind(this);
   setTimeout(push, this.throttle);
 }
-
-// Test
-if (typeof window === 'undefined' && !module.parent) {
-  var numbers = new NumberReadable({ to: 3 });
-  numbers
-    .on('data', console.log)
-    .on('end', function () { console.error('ended') })
-}
