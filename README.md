@@ -46,7 +46,7 @@ Creates a readable stream that will emit how many chunks the given stream emitte
 
 *ReadableStream* that will emit updates about the chunk rate of the given stream.
 
-###*chunkRateReadable.endSoon *
+###*chunkRateReadable.endSoon*
 
 Call this in case you want to tell the rate stream to end.
 Useful for testing and/or when you want to end your debugging session and allow the program to exit.
